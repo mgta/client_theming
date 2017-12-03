@@ -32,10 +32,10 @@ cmake -DCMAKE_OSX_SYSROOT="/Applications/Xcode.app/Contents/Developer/Platforms/
 make -j2
 sudo make -j1 install
 # The magic string here is SHA1 hash of your Developer ID Application certificate
-sudo ~/client/admin/osx/sign_app.sh ~/install/nextcloud.app 74FB2413760D6407588B69F499F13514A86AE
+sudo ~/client/admin/osx/sign_app.sh ~/install/thebox.app "Mac Developer"
 # The magic string here is SHA1 hash of your Developer ID Installer certificate
-sudo ~/build-mac/admin/osx/create_mac.sh ../install/ . 1B8B3FD4A0ADCC5BF4385FA1A50F4547DE73C95E
+sudo ~/build-mac/admin/osx/create_mac.sh ../install/ . "Mac Developer Installer"
 
 # Generate a sparkle signature for the tbz
-openssl dgst -sha1 -binary < ~/install/*.tbz | openssl dgst -dss1 -sign ~/dsa_priv.pem | openssl enc -base64 > ~/sig.txt
+openssl dgst -sha1 -binary < ~/install/TheBox-2.3.3.1.pkg.tbz | openssl dgst -dss1 -sign ~/dsa_priv.pem | openssl enc -base64 > ~/sig.txt
 sudo mv ~/sig.txt ~/install/signature.txt

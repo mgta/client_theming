@@ -1,18 +1,18 @@
-set( APPLICATION_NAME       "Nextcloud" )
-set( APPLICATION_SHORTNAME  "Nextcloud" )
-set( APPLICATION_EXECUTABLE "nextcloud" )
-set( APPLICATION_DOMAIN     "nextcloud.com" )
-set( APPLICATION_VENDOR     "Nextcloud GmbH" )
+set( APPLICATION_NAME       "TheBox" )
+set( APPLICATION_SHORTNAME  "TheBox" )
+set( APPLICATION_EXECUTABLE "thebox" )
+set( APPLICATION_DOMAIN     "thebox.de" )
+set( APPLICATION_VENDOR     "MAGENTA COMPUTER AG" )
 set( APPLICATION_UPDATE_URL "https://updates.nextcloud.org/client/" CACHE string "URL for updater" )
 set( APPLICATION_ICON_NAME  "Nextcloud" )
 
 set( THEME_CLASS            "NextcloudTheme" )
-set( APPLICATION_REV_DOMAIN "com.nextcloud.desktopclient" )
+set( APPLICATION_REV_DOMAIN "de.thebox.desktopclient" )
 set( WIN_SETUP_BITMAP_PATH  "${OEM_THEME_DIR}/win" )
 
 set( MAC_INSTALLER_BACKGROUND_FILE "${OEM_THEME_DIR}/osx/installer-background.png" CACHE STRING "The MacOSX installer background image")
 
-set( THEME_INCLUDE          "${OEM_THEME_DIR}/nextcloudtheme.h" )
+set( THEME_INCLUDE          "${OEM_THEME_DIR}/theboxtheme.h" )
 # set( APPLICATION_LICENSE    "${OEM_THEME_DIR}/license.txt )
 
 option( WITH_CRASHREPORTER "Build crashreporter" OFF )
